@@ -4,12 +4,12 @@
 
 
 def escrever_arquivo():
-    with open('text.t', "w") as arquivo:
-        frase = input("digite uma frase: ")
+    with open('frase.txt', "w") as arquivo:
         for i in range(5):
-            arquivo.write(frase)
+            frase = input("digite uma frase: ")
+            arquivo.write(frase + "\n")
 def contar_arquivo():
-    with open("text.t",'r') as arquivo:
+    with open("frase.txt",'r') as arquivo:
        linhas = arquivo.readlines()
     quantidade = len(linhas)
     print(f"O arquivo tem {quantidade} linhas.")
