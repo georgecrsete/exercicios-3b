@@ -9,7 +9,7 @@ def adicionar_contato(contatos):
     print("Contato adicionado com sucesso!\n")
 
 def salvar_cont(contatos):
-    with open("contatos2.txt", "w") as arquivo:
+    with open("contatos85.txt", "w") as arquivo:
         for tel, nome in contatos.items():
             arquivo.write(f"{nome};{tel}\n")
     print("Contatos salvos no arquivo!\n")
@@ -17,7 +17,7 @@ def salvar_cont(contatos):
 def mostrar_contatos():
     contatos = {}
     try:
-        with open("contatos2.txt", "r") as arquivo:
+        with open("contatos85.txt", "r") as arquivo:
             for linha in arquivo:
                 tel, nome = linha.strip().split(";")
                 contatos[tel] = nome
